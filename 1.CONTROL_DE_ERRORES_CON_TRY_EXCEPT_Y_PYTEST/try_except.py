@@ -1,3 +1,4 @@
+#TODO: ABRIR CON VISUAL ESTUDIO U OTRO DÍA
 import pandas as pd
 
 finanza=pd.read_csv('finanzas2020[1].csv', sep='\t')

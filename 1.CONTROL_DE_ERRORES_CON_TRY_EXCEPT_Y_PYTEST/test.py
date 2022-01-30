@@ -1,3 +1,4 @@
+#TODO: ABRIR CON VISUAL ESTUDIO U OTRO DÍA
 ######################################################################################
 ###################################### LIBRERÍAS ######################################
 ######################################################################################
@@ -29,7 +30,7 @@ def test_existencia_archivos():
     assert main.existencia_archivo_con_12_columnas(archivo_prueba_error)==error_existencia_de_archivos
     assert main.existencia_archivo_con_12_columnas(archivo_prueba_correct)==correcto_input_existencia_de_archivos
 
-def test_si_hay_contenido():º
+def test_si_hay_contenido():
     assert main.si_hay_contenido(archivo_prueba_correct)==hay_contenido
     assert main.si_hay_contenido(archivo_vacio)==no_hay_contenidO
 
