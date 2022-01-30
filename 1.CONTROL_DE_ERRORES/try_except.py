@@ -25,3 +25,31 @@ def si_hay_contenido(df):
 
 print(si_hay_contenido(finanza) )
 
+
+############################################################
+def solo_valores_tipo_float(df):
+    
+    columnas=df.columns.to_list()
+    global df_float
+    df_float=pd.DataFrame()
+
+    for c in columnas:
+        Nº_NO_Enteros=0
+        for v in df[c].values:
+            try:
+                nuevo_valor=float(v)
+            except ValueError:
+                nuevo_valor=0
+            finally:
+                df_float.loc[Nº_NO_Enteros,c]=nuevo_valor
+                Nº_NO_Enteros+=1
+    for col in columnas:
+        if (df_float[col].dtype=='float64'):
+            resultado_correcto='TODAS LAS VARIABLES-COLUMNAS SON DE TIPO FLOAT '
+            return resultado_correcto
+        else:
+            resultado_erroneo='NO SON TODAS LAS VARIABLES DE TIPO FLOAT'
+            return resultado_erroneo
+
+print(solo_valores_tipo_float(finanza))
+print(f'DF CON VARIABLES FLOAT: \n {df_float.head()}')
