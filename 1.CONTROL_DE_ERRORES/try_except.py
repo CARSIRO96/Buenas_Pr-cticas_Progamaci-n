@@ -12,3 +12,16 @@ def existencia_archivo_con_12_columnas(df):
         return resultado_erroneo
 
 print(existencia_archivo_con_12_columnas(finanza))
+
+############################################################
+def si_hay_contenido(df):
+    try:
+        hay_contenido='HAY CONTENIDO EN CADA COLUMNA DEL DF'
+        assert(len(df!=0))
+        return hay_contenido
+    except:
+        no_hay_contenidO='NO HAY CONTENIDO'
+        return no_hay_contenidO
+
+print(si_hay_contenido(finanza) )
+
